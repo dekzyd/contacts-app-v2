@@ -1,0 +1,13 @@
+{
+  "resourceName": "contactsv2storage",
+  "policyUUID": "e8463480",
+  "bucketName": "contactsv2storage",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

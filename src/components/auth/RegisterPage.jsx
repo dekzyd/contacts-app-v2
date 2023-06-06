@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-// import { Auth } from 'aws-amplify';
+import { Auth } from "aws-amplify";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -22,13 +22,13 @@ function RegisterPage() {
       console.log(password);
       console.log(email);
 
-      // const { user } = await Auth.signUp({
-      //   username: username,
-      //   password: password,
-      //   attributes: {
-      //     email: email,
-      //   },
-      // });
+      const { user } = await Auth.signUp({
+        username: username,
+        password: password,
+        attributes: {
+          email: email,
+        },
+      });
 
       navigate("/validate");
     } catch (err) {

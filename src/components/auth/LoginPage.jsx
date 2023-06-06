@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-// import { Auth } from 'aws-amplify';
+import { Auth } from "aws-amplify";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -21,7 +21,7 @@ function LoginPage(props) {
       console.log(username);
       console.log(password);
 
-      // await Auth.signIn(username, password);
+      await Auth.signIn(username, password);
 
       props.updateAuthStatus(true);
       navigate("/contacts");

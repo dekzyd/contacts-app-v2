@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-// import { Auth } from 'aws-amplify';
+import { Auth } from "aws-amplify";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -21,7 +21,8 @@ function ValidatePage() {
       console.log(username);
       console.log(authenticationCode);
 
-      // await Auth.confirmSignUp(username, authenticationCode);
+      await Auth.confirmSignUp(username, authenticationCode);
+
       navigate("/login");
     } catch (err) {
       console.log(err);

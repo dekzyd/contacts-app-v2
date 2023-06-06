@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
-// import { Amplify } from 'aws-amplify';
-// import awsExports from './aws-exports';
+import { Amplify } from "aws-amplify";
+import awsExports from "./aws-exports";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import '@aws-amplify/ui-react/styles.css';
+import "@aws-amplify/ui-react/styles.css";
 
 import SiteNav from "./components/common/SiteNav";
 import SiteFooter from "./components/common/SiteFooter";
@@ -16,7 +16,7 @@ import RegisterPage from "./components/auth/RegisterPage";
 import ValidatePage from "./components/auth/ValidatePage";
 import Contacts from "./components/contacts/Contacts";
 
-// Amplify.configure(awsExports);
+Amplify.configure(awsExports);
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
